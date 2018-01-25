@@ -1,12 +1,13 @@
 {
   "name": "universal-react-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A logger to catch client errors on the server.",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,5 +30,20 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      ["transform-class-properties", { "spec": true }]
+    ]
   }
 }

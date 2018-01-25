@@ -20,7 +20,7 @@
     "universal applications",
     "logger"
   ],
-  "author": "Ana Luiza Cicconi",
+  "author": "Ana Luiza Cicconi <analuizacicconi@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anacicconi/universal-react-logger/issues"

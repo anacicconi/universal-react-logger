@@ -1,0 +1,33 @@
+{
+  "name": "universal-react-logger",
+  "version": "1.0.0",
+  "description": "A logger to catch client errors on the server.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacicconi/universal-react-logger.git"
+  },
+  "keywords": [
+    "reactjs",
+    "javascript",
+    "js",
+    "universal applications",
+    "logger"
+  ],
+  "author": "Ana Luiza Cicconi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacicconi/universal-react-logger/issues"
+  },
+  "homepage": "https://github.com/anacicconi/universal-react-logger#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-router-dom": "^16.2.0"
+  }
+}

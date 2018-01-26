@@ -10,28 +10,28 @@ function ErrorHandler (WrappedComponent, critical) {
 
         constructor (props) {
             super(props);
-
             this.state = {
                 eventError: null
-            }
+            };
+            this.setEventError = this.setEventError.bind(this);
         }
 
-        setEventError = (eventError) => {
+        setEventError(eventError) {
             this.setState({eventError});
-        };
+        }
 
         render () {
             if (this.state.eventError) {
                 return (
                     <ErrorBoundary critical={critical} eventError={this.state.eventError}>
-                        <WrappedComponent setEventError={ this.setEventError } { ...this.props }/>
+                        <WrappedComponent setEventError={this.setEventError} {...this.props}/>
                     </ErrorBoundary>
                 )
             }
 
             return (
                 <ErrorBoundary critical={critical}>
-                    <WrappedComponent setEventError={ this.setEventError } { ...this.props }/>
+                    <WrappedComponent setEventError={this.setEventError} {...this.props}/>
                 </ErrorBoundary>
             );
         }

@@ -11,6 +11,8 @@ class ErrorBoundary extends React.Component {
             renderError: null,
             renderErrorInfo: null
         };
+        this.resetRenderError   = this.resetRenderError.bind(this);
+        this.resetEventError    = this.resetEventError.bind(this);
     }
 
     componentDidCatch(renderError, renderErrorInfo) {
@@ -56,22 +58,22 @@ class ErrorBoundary extends React.Component {
         }
     }
 
-    resetRenderError = () => {
+    resetRenderError() {
         this.setState({
             renderError: null,
             renderErrorInfo: null
         });
-    };
+    }
 
-    resetEventError = () => {
+    resetEventError() {
         this.props.eventError = null;
-    };
+    }
 
     render() {
         if (this.props.critical && this.state.renderError) {
             return (
                 <div>
-                    <Link to="/" onClick={() => { this.resetRenderError() }}>Back to Homepage</Link>
+                    <Link to="/" onClick={this.resetRenderError}>Back to Homepage</Link>
                     <h2>Something went wrong.</h2>
                 </div>
             );
@@ -80,7 +82,7 @@ class ErrorBoundary extends React.Component {
         if (this.props.critical && this.props.eventError) {
             return (
                 <div>
-                    <Link to="/" onClick={() => { this.resetEventError() }}>Back to Homepage</Link>
+                    <Link to="/" onClick={this.resetEventError}>Back to Homepage</Link>
                     <h2>Something went wrong.</h2>
                 </div>
             )

@@ -18,8 +18,13 @@
     "reactjs",
     "javascript",
     "js",
-    "universal applications",
-    "logger"
+    "isomorphic applications",
+    "isomorphic javascript",
+    "universal javascript",
+    "logging",
+    "logger",
+    "ssr",
+    "csr"
   ],
   "author": "Ana Luiza Cicconi <analuizacicconi@gmail.com>",
   "license": "ISC",
